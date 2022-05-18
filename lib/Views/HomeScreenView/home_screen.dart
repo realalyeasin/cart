@@ -28,22 +28,18 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             CatalogItems(),
-            Stack(
-              children: [
-                Badge(
-                  child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(primary: Color.fromRGBO(33, 135, 171, 1)),
-                      onPressed: (){ Get.to(() => CartScreen()); },
-                      child: const Text("Go to Cart")),
-                  badgeContent: Text(number.string, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
-                  badgeColor: Colors.black,
-                  borderRadius: BorderRadius.circular(10),
-                  toAnimate: false,
-                  animationType: BadgeAnimationType.slide,
-                  animationDuration: Duration(seconds: 2),
-                  showBadge: true,
-                ),
-              ],
+            Badge(
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(primary: Color.fromRGBO(33, 135, 171, 1)),
+                  onPressed: (){ Get.to(() => CartScreen()); },
+                  child: const Text("Go to Cart")),
+              badgeContent: Text(number.string, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+              badgeColor: Colors.black,
+              borderRadius: BorderRadius.circular(10),
+              toAnimate: false,
+              animationType: BadgeAnimationType.slide,
+              animationDuration: Duration(seconds: 2),
+              showBadge: true,
             ),
             const SizedBox(height: 20,)
           ],

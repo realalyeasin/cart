@@ -8,15 +8,20 @@ class CartTotal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var number = controller.quantity;
-    return Obx(()=>
-        Column(
-              children: [
-                Text('Total ${number}', style: TextStyle(fontSize: 18),),
-                Text("${controller.total.toString()}"" \$",style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),),
-                SizedBox(height: 10,)
-              ],
+    return Obx(() => Column(
+          children: [
+            Text(
+              'Total ${number}',
+              style: TextStyle(fontSize: 18),
             ),
-
-    );
+            Padding(
+              padding: const EdgeInsets.only(bottom: 10),
+              child: Text(
+                "${controller.total.toString()}" " \$",
+                style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+              ),
+            )
+          ],
+        ));
   }
 }

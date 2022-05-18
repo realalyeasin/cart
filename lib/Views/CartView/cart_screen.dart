@@ -13,14 +13,13 @@ class CartScreen extends StatelessWidget {
         backgroundColor: Color.fromRGBO(166, 207, 221, 1),
       appBar: AppBar(title: Text("Your Cart"), backgroundColor: Color.fromRGBO(33, 135, 171, 1),),
       body: Obx(()=> cartController.quantityy == 0 ? Center(child: Text("No Items in cart", style: TextStyle(fontSize: 18, fontStyle: FontStyle.italic),),) :
-      Container(
-        child: Column(
-          children: [
-            CartProducts(),
-            Expanded(child: CartTotal())
-          ],
-        ),
-      ))
+      Column(
+            children: [
+              Expanded(child: CartProducts()),
+              CartTotal()
+            ],
+          ),
+        )
     );
   }
 }
