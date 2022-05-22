@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import '../../Controller/product_controller.dart';
 import '../CartView/cart_screen.dart';
 import 'catalog_items.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:cart/Extension/BuildContext/loc.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
@@ -23,7 +25,7 @@ class HomePage extends StatelessWidget {
           )
         ],
         backgroundColor: Color.fromRGBO(33, 135, 171, 1),
-        title: const Text("Catalog"),),
+        title: Text(context.loc!.my_title),),
       body: SafeArea(
         child: Column(
           children: [
