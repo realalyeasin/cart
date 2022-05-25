@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import '../../Controller/product_controller.dart';
 import '../CartView/cart_screen.dart';
 import 'catalog_items.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:cart/Extension/BuildContext/loc.dart';
 
 class HomePage extends StatelessWidget {

@@ -4,7 +4,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'Cubit/app_cubit_logics.dart';
+import 'dart:developer' as devtools show log;
 
+extension Log on Object{
+  void log() => devtools.log(toString());
+}
 void main() {
   runApp(GetMaterialApp(
     debugShowCheckedModeBanner: false,

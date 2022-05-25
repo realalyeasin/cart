@@ -4,9 +4,9 @@ import 'package:get/get.dart';
 
 class CartController extends GetxController{
   var _products = {}.obs;
-  var _favorite ={}.obs;
   var quantity = 0.obs;
   var favoritetQuantity = 0.obs;
+  RxBool fav = false.obs;
   void addProduct(Product product){
     if(_products.containsKey(product)){
       _products[product] +=1;
@@ -31,7 +31,16 @@ class CartController extends GetxController{
     }
   }
 
-  get favorite => _favorite;
+  void favoriteCart(){
+    quantity++;
+    fav.toggle();
+  }
+
+  void removeFavoriteCart(){
+    quantity--;
+    fav.toggle();
+  }
+
 
   get products => _products;
 
