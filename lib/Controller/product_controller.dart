@@ -32,7 +32,7 @@ class CartController extends GetxController{
   }
 
   void favoriteCart(){
-    quantity++;
+    quantity--;
     fav.toggle();
   }
 
